@@ -1,16 +1,14 @@
 package com.example.restservice;
 
+import lombok.Data;
+
+@Data
 public class Hello {
 
-  private String name;
-  private int count;
+  private String Message;
 
-  public Hello(String name, int count) {
-    this.name = name;
-    this.count = count;
+  public Hello(String name) {
+    this.Message = name;
   }
 
-  public String getMessage() {
-    return name;
-  }
 }

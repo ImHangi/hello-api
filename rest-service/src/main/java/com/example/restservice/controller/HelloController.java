@@ -1,5 +1,6 @@
-package com.example.restservice;
+package com.example.restservice.controller;
 
+import com.example.restservice.Hello;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,6 +16,6 @@ public class HelloController {
   @ResponseStatus(value = HttpStatus.OK)
   public Hello hello(@RequestParam(value = "name", defaultValue = "") String name,
       @RequestParam(value = "count", defaultValue = "1") int count) {
-    return new Hello(String.format(template, name), count);
+    return new Hello(String.format(template, name));
   }
 }
