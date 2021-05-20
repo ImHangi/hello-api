@@ -5,10 +5,10 @@ import lombok.Data;
 @Data
 public class Hello {
 
-  private String Message;
+  private String message;
 
   public Hello(String name) {
-    this.Message = name;
+    this.message = name;
   }
 
 }
