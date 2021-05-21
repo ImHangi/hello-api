@@ -23,8 +23,8 @@ public class UserController {
   }
 
   @DeleteMapping("/delete-user")
-  public void DeleteUser(int id) {
-    userService.deleteUser(id);
+  public void DeleteUser(@RequestBody User user) {
+    userService.deleteUser(user.getId());
   }
 
   @PutMapping("/modify-user")
